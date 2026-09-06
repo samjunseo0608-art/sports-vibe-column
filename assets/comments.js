@@ -31,6 +31,8 @@
     thread.dataset.pageId=location.pathname;
     thread.dataset.pageUrl=location.href;
     thread.dataset.pageTitle=document.title;
+    thread.dataset.theme='auto';
+    thread.dataset.lang='ko';
     root.appendChild(thread);
     const s=document.createElement('script');
     s.async=true;s.defer=true;s.src=(cfg.host||'https://cusdis.com')+'/js/cusdis.es.js';
