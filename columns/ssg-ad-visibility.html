@@ -5,6 +5,20 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>야구장 광고, 어디가 진짜 좋은 자리인가 — SSG 랜더스필드 현장 노출가치 분석 | 체대생의 스포츠 바이브코딩</title>
+<meta name="description" content="SSG 랜더스필드의 광고 구좌를 관중석 시야각과 좌석 위치를 기준으로 비교한 스포츠 산업 데이터 칼럼입니다."/>
+<link rel="canonical" href="https://samjunseo0608-art.github.io/sports-vibe-column/columns/ssg-ad-visibility.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="체대생의 스포츠 바이브코딩"/>
+<meta property="og:title" content="야구장 광고, 어디가 진짜 좋은 자리인가"/>
+<meta property="og:description" content="SSG 랜더스필드 광고 구좌를 관중석 시야각과 좌석 위치를 기준으로 데이터로 비교했습니다."/>
+<meta property="og:url" content="https://samjunseo0608-art.github.io/sports-vibe-column/columns/ssg-ad-visibility.html"/>
+<meta property="og:image" content="https://samjunseo0608-art.github.io/sports-vibe-column/assets/share/ssg-ad-visibility.png"/>
+<meta property="og:image:width" content="1102"/>
+<meta property="og:image:height" content="635"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="야구장 광고, 어디가 진짜 좋은 자리인가"/>
+<meta name="twitter:description" content="SSG 랜더스필드 광고 구좌를 관중석 시야각과 좌석 위치를 기준으로 데이터로 비교했습니다."/>
+<meta name="twitter:image" content="https://samjunseo0608-art.github.io/sports-vibe-column/assets/share/ssg-ad-visibility.png"/>
 <style>
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 :root {
@@ -164,6 +178,21 @@ tbody tr:last-child td{border-bottom:0}
 .article-tools{max-width:1050px;margin:0 auto;padding:32px 22px 0;display:flex;justify-content:flex-end;gap:10px}.article-tools button,.article-tools a{border:1px solid #e2e7ec;background:#fff;border-radius:12px;padding:10px 14px;color:#173a5e;font:700 13px "Pretendard";text-decoration:none;cursor:pointer}
 .comments-section{max-width:1050px;margin:70px auto 90px;padding:0 22px;font-family:"Pretendard",sans-serif}.comments-card{background:#fff;border:1px solid #e3e8ee;border-radius:24px;padding:34px;box-shadow:0 14px 36px rgba(20,34,51,.06)}.comments-card h2{font-size:28px;letter-spacing:-.04em;margin:0 0 8px;color:#182435}.comments-card>p{color:#6a7688;margin:0 0 24px;line-height:1.7}.comment-ready{display:flex;gap:18px;align-items:flex-start;background:#f6f8fa;border-radius:18px;padding:22px}.comment-icon{font-size:28px}.comment-ready strong{font-size:16px}.comment-ready p{font-size:13px;color:#6a7688;line-height:1.75;margin:6px 0 0}.comment-ready code{background:#edf1f5;padding:2px 5px;border-radius:5px}.column-footer{background:#0c2946;color:#fff;padding:32px 22px;font-family:"Pretendard",sans-serif}.column-footer .inner{max-width:1050px;margin:auto;display:flex;justify-content:space-between;gap:20px;font-size:13px;color:rgba(255,255,255,.65)}.column-footer strong{color:#fff}.column-footer a{color:#fff;text-decoration:none}
 @media(max-width:700px){.column-nav{display:none}.comments-card{padding:23px}.column-footer .inner{flex-direction:column}}
+
+
+/* Rich social share sheet */
+body.share-lock{overflow:hidden}
+.share-sheet-backdrop{position:fixed;inset:0;z-index:9999;background:rgba(7,19,33,.46);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .18s ease}
+.share-sheet-backdrop.open{opacity:1}
+.share-sheet{width:min(620px,100%);background:#fff;border:1px solid rgba(21,45,70,.1);border-radius:28px;box-shadow:0 28px 80px rgba(7,24,42,.28);padding:28px;transform:translateY(14px) scale(.985);transition:transform .18s ease;font-family:"Pretendard",sans-serif;color:#182435}
+.share-sheet-backdrop.open .share-sheet{transform:none}
+.share-sheet-grip{display:none;width:42px;height:4px;background:#d7dee7;border-radius:999px;margin:0 auto 18px}
+.share-sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:24px}
+.share-sheet-head>div>span{display:block;color:#b31e35;font-size:11px;font-weight:900;letter-spacing:.14em;margin-bottom:6px}.share-sheet-head h3{margin:0;font-size:25px;letter-spacing:-.025em;line-height:1.35}.share-sheet-head p{margin:7px 0 0;color:#758194;font-size:14px;line-height:1.6}.share-sheet-close{flex:0 0 auto;width:38px;height:38px;border-radius:50%;border:1px solid #e0e6ed;background:#fff;color:#4d5e72;font-size:25px;line-height:1;cursor:pointer}.share-sheet-close:hover{background:#f4f7fa}
+.share-platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.share-platform-grid button{min-height:126px;border:1px solid #e4e9ef;border-radius:19px;background:#fff;padding:17px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;color:#182435;font-family:inherit;transition:.18s transform,.18s box-shadow,.18s border-color}.share-platform-grid button:hover{transform:translateY(-2px);border-color:#cdd6e0;box-shadow:0 10px 28px rgba(16,43,69,.08)}.share-platform-grid strong{font-size:14px;line-height:1.3}.share-platform-grid small{font-size:11.5px;color:#8a96a5;line-height:1.3}
+.share-logo{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;font-size:19px;font-weight:900;margin-bottom:2px}.share-logo-kakao{background:#FEE500;color:#191919}.share-logo-instagram{color:#fff;background:radial-gradient(circle at 30% 105%,#fdf497 0 9%,#fd5949 35%,#d6249f 62%,#285AEB 100%);font-size:26px}.share-logo-x{background:#111;color:#fff}.share-logo-facebook{background:#1877F2;color:#fff;font-family:Arial,sans-serif;font-size:25px}.share-logo-copy{background:#eff3f7;color:#334c65;font-size:23px}.share-logo-more{background:#eff3f7;color:#334c65;letter-spacing:1px;font-size:16px}.share-sheet-note{margin-top:18px;padding:12px 14px;border-radius:13px;background:#f6f8fa;color:#7b8796;font-size:12px;line-height:1.6;text-align:center}
+.share-toast{position:fixed;left:50%;bottom:28px;z-index:10050;transform:translate(-50%,16px);background:#142a42;color:#fff;border-radius:999px;padding:11px 17px;font-family:"Pretendard",sans-serif;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(10,27,45,.22);opacity:0;pointer-events:none;transition:.18s opacity,.18s transform}.share-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:640px){.share-sheet-backdrop{align-items:flex-end;padding:0}.share-sheet{width:100%;border-radius:26px 26px 0 0;padding:16px 18px 24px;transform:translateY(100%);max-height:90vh;overflow:auto}.share-sheet-backdrop.open .share-sheet{transform:translateY(0)}.share-sheet-grip{display:block}.share-sheet-head{margin-bottom:18px}.share-sheet-head h3{font-size:22px}.share-platform-grid{grid-template-columns:repeat(3,1fr);gap:9px}.share-platform-grid button{min-height:112px;padding:14px 8px;border-radius:16px}.share-logo{width:40px;height:40px}.share-sheet-note{text-align:left}.share-toast{bottom:20px;max-width:calc(100% - 30px);white-space:nowrap}}
 
 </style>
 </head>
@@ -460,7 +489,7 @@ tbody tr:last-child td{border-bottom:0}
 <div class="article-tools"><a href="../index.html">← 칼럼 목록</a><button type="button" data-share>공유하기</button></div>
 <section class="comments-section" id="comments"><div class="comments-card"><h2>💬 이 분석에 대해 이야기해 주세요</h2><p>다른 해석, 모델의 아쉬운 점, 다음에 분석해봤으면 하는 주제를 남겨주세요. 칼럼마다 댓글이 따로 쌓이도록 구성했습니다.</p><div id="comments-widget"></div></div></section>
 <footer class="column-footer"><div class="inner"><div><strong>체대생의 스포츠 바이브코딩</strong><br>스포츠 산업을 질문하고 분석하는 기록</div><div><a href="../index.html">홈으로</a> · <a href="../about.html">글쓴이 소개</a></div></div></footer>
-<script src="../assets/site-config.js?v=20260907-0410"></script><script src="../assets/comments.js?v=20260907-0410"></script><script src="../assets/site.js?v=20260907-0410"></script>
+<script src="../assets/site-config.js?v=20260907-0520"></script><script src="../assets/comments.js?v=20260907-0520"></script><script src="../assets/site.js?v=20260907-0520"></script>
 
 </body>
 </html>
