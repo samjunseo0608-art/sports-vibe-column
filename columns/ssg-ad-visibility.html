@@ -195,6 +195,8 @@ body.share-lock{overflow:hidden}
 .share-toast{position:fixed;left:50%;bottom:28px;z-index:10050;transform:translate(-50%,16px);background:#142a42;color:#fff;border-radius:999px;padding:11px 17px;font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(10,27,45,.22);opacity:0;pointer-events:none;transition:.18s opacity,.18s transform}.share-toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:640px){.share-sheet-backdrop{align-items:flex-end;padding:0}.share-sheet{width:100%;border-radius:26px 26px 0 0;padding:16px 18px 24px;transform:translateY(100%);max-height:90vh;overflow:auto}.share-sheet-backdrop.open .share-sheet{transform:translateY(0)}.share-sheet-grip{display:block}.share-sheet-head{margin-bottom:18px}.share-sheet-head h3{font-size:22px}.share-platform-grid{grid-template-columns:repeat(3,1fr);gap:9px}.share-platform-grid button{min-height:112px;padding:14px 8px;border-radius:16px}.share-logo{width:40px;height:40px}.share-sheet-note{text-align:left}.share-toast{bottom:20px;max-width:calc(100% - 30px);white-space:nowrap}}
 
+
+.social-share-hint{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:18px auto 0;max-width:1100px;padding:12px 16px;border-top:1px solid #e6ebf0;border-bottom:1px solid #e6ebf0;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;color:#65758a;font-size:13px;line-height:1.6}.social-share-hint span:first-child{font-weight:800;color:#183451}.social-share-hint span:last-child{text-align:right}@media(max-width:640px){.social-share-hint{align-items:flex-start;flex-direction:column;gap:4px}.social-share-hint span:last-child{text-align:left}}
 </style>
 </head>
 <body>
@@ -487,10 +489,11 @@ body.share-lock{overflow:hidden}
 </article>
 </div>
 
-<div class="article-tools"><a href="../index.html">← 칼럼 목록</a><button type="button" data-share>공유하기</button></div>
+<div class="article-tools"><a href="../index.html">← 칼럼 목록</a><button type="button" data-share aria-haspopup="dialog">공유하기</button></div>
+<div class="social-share-hint" aria-label="SNS 공유 안내"><span>이 글을 함께 나누기</span><span>카카오톡 · 인스타그램 · X · Facebook · 이메일 · 링크 복사</span></div>
 <section class="comments-section" id="comments"><div class="comments-card"><h2>💬 이 분석에 대해 이야기해 주세요</h2><p>다른 해석, 모델의 아쉬운 점, 다음에 분석해봤으면 하는 주제를 남겨주세요. 칼럼마다 댓글이 따로 쌓이도록 구성했습니다.</p><div id="comments-widget"></div></div></section>
 <footer class="column-footer"><div class="inner"><div><strong>체대생의 스포츠 바이브코딩</strong><br>스포츠 산업을 질문하고 분석하는 기록</div><div><a href="../index.html">홈으로</a> · <a href="../about.html">글쓴이 소개</a></div></div></footer>
-<script src="../assets/site-config.js?v=20260907-0520"></script><script src="../assets/comments.js?v=20260907-0520"></script><script src="../assets/site.js?v=20260907-0610"></script>
+<script src="../assets/site-config.js?v=20260907-0520"></script><script src="../assets/comments.js?v=20260907-0520"></script><script src="../assets/site.js?v=20260907-0715"></script>
 
 </body>
 </html>

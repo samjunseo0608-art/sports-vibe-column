@@ -132,5 +132,9 @@
   }
 
   buildShareSheet();
-  document.querySelectorAll('[data-share]').forEach(btn=>btn.addEventListener('click',()=>document.querySelector('.share-sheet-backdrop')?._open?.()));
+  document.querySelectorAll('button[data-share]').forEach(btn=>btn.addEventListener('click',e=>{
+    e.preventDefault();
+    e.stopPropagation();
+    document.querySelector('.share-sheet-backdrop')?._open?.();
+  }));
 })();
