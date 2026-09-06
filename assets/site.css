@@ -47,3 +47,86 @@ main{max-width:1180px;margin:auto;padding:72px 24px 100px}.section-head{display:
 .story-flow{display:grid;gap:14px;margin-bottom:54px}.story-step{display:grid;grid-template-columns:76px 1fr;gap:22px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 30px}.story-num{font-size:30px;font-weight:900;color:#cbd3dd;letter-spacing:-.04em}.story-kicker{display:block;font-size:11px;font-weight:900;letter-spacing:.09em;color:var(--accent);margin:2px 0 6px}.story-step h3{font-size:23px;letter-spacing:-.035em;margin:0 0 8px}.story-step p{margin:0!important}.belief-box{background:linear-gradient(135deg,#0b2642,#173f68);color:#fff;border-radius:30px;padding:44px;margin-bottom:48px}.belief-label{font-size:11px;color:#ffb6b9;font-weight:900;letter-spacing:.1em;margin-bottom:10px}.belief-box h2{font-size:31px;line-height:1.45;margin:0 0 26px!important}.belief-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.belief-grid>div{border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:20px;background:rgba(255,255,255,.04)}.belief-grid strong{display:block;color:#fff;margin-bottom:7px}.belief-grid span{font-size:13px;color:rgba(255,255,255,.7);line-height:1.7}.closing-note{text-align:center;background:#fff;border:1px solid var(--line);border-radius:28px;padding:42px}.closing-note h2{margin:0 0 10px!important}.closing-note p{max-width:680px;margin:0 auto 24px!important}
 @media(max-width:850px){.method-card{grid-template-columns:repeat(2,1fr)}.method-item:nth-child(2){border-right:0}.method-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.article-list-home{grid-template-columns:1fr}.article-card-live{grid-template-columns:1fr}.profile-grid{grid-template-columns:1fr}.belief-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.method-card{grid-template-columns:1fr}.method-item{min-height:auto;border-right:0!important;border-bottom:1px solid var(--line)!important;padding:19px 8px}.method-item:last-child{border-bottom:0!important}.article-card-live .thumb{min-height:230px}.home-profile,.intro-note,.belief-box,.closing-note{padding:28px 24px}.story-step{grid-template-columns:1fr;gap:6px;padding:24px}.story-num{font-size:22px}.intro-note h2{font-size:27px}.intro-note blockquote{font-size:18px}.about-box-data h2{font-size:31px}}
+
+/* cache-busted homepage method cards */
+.method-card{overflow:hidden}
+.method-item{gap:0}
+.method-item .method-kicker{display:block}
+.method-item strong{display:block}
+.method-item>span:last-child{display:block}
+@media(min-width:851px){
+  .method-item{align-items:flex-start}
+}
+
+
+/* 2026-09 readability pass: wider tracking, looser line height, writer page separation */
+body{
+  letter-spacing:-0.006em;
+  line-height:1.68;
+}
+p, li{
+  line-height:1.9;
+}
+.brand{letter-spacing:-0.015em;line-height:1.35}
+.nav-links{letter-spacing:.01em;gap:26px}
+.nav-links a{padding:8px 2px}
+.nav-links a.active{color:var(--accent)}
+.hero-title{letter-spacing:-0.025em;line-height:1.14;margin-top:26px;margin-bottom:24px}
+.hero-desc{line-height:1.9;letter-spacing:0}
+.section-head{margin-bottom:30px}
+.section-head h2{letter-spacing:-0.02em;line-height:1.35}
+.section-head p{line-height:1.85;margin-top:10px}
+.method-item{padding:30px 24px;min-height:168px}
+.method-kicker{margin-bottom:11px;letter-spacing:.12em}
+.method-item strong{letter-spacing:-0.015em;line-height:1.42;margin-bottom:10px}
+.method-item>span:last-child{line-height:1.78;letter-spacing:0}
+.article-card h3,.article-card-live h3{letter-spacing:-0.015em;line-height:1.5}
+.article-card p,.article-card-live p{line-height:1.85;letter-spacing:0}
+.topic{padding:30px;min-height:224px}
+.topic h3{line-height:1.45;margin-top:20px;margin-bottom:10px;letter-spacing:-0.01em}
+.topic p{line-height:1.85;letter-spacing:0}
+.about-box{gap:58px;padding:58px 56px}
+.about-box h2,.about-box-data h2{letter-spacing:-0.02em;line-height:1.42}
+.about-box p{line-height:2;letter-spacing:0}
+.subscribe{padding:44px 42px}
+.subscribe h2{letter-spacing:-0.02em;line-height:1.45;margin-bottom:12px}
+.subscribe p{line-height:1.88;letter-spacing:0}
+.page-hero h1,.about-hero h1{letter-spacing:-0.022em;line-height:1.25}
+.page-hero p{line-height:1.9;letter-spacing:0}
+.about-page p,.about-page li{line-height:2;letter-spacing:0}
+.intro-note{padding:46px 48px;margin-bottom:54px}
+.intro-note h2{letter-spacing:-0.02em;line-height:1.5;margin:12px 0 18px}
+.intro-note p{line-height:2}
+.intro-note blockquote{line-height:1.7;margin-top:30px;letter-spacing:-0.01em}
+.writer-tags{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 24px}
+.writer-tags span{display:inline-flex;align-items:center;padding:8px 12px;border:1px solid var(--line);background:#f7f9fb;border-radius:999px;font-size:12px;font-weight:800;color:#5f6e82;letter-spacing:0}
+.story-flow{gap:18px}
+.story-step{grid-template-columns:84px 1fr;gap:26px;padding:32px 34px}
+.story-num{letter-spacing:-0.01em}
+.story-kicker{letter-spacing:.12em;margin-bottom:9px}
+.story-step h3{letter-spacing:-0.015em;line-height:1.5;margin-bottom:10px}
+.story-step p{line-height:1.95!important}
+.belief-box{padding:50px 48px}
+.belief-box h2{letter-spacing:-0.018em;line-height:1.55}
+.belief-grid{gap:16px}
+.belief-grid>div{padding:24px}
+.belief-grid strong{margin-bottom:9px;line-height:1.45}
+.belief-grid span{line-height:1.85;letter-spacing:0}
+.closing-note{padding:48px 44px}
+.closing-note h2{letter-spacing:-0.015em;line-height:1.45}
+.closing-note p{line-height:1.95!important}
+
+@media(max-width:850px){
+  .method-item{padding:26px 22px}
+  .about-box{padding:40px 36px;gap:26px}
+  .intro-note{padding:36px 32px}
+  .story-step{padding:28px 28px}
+}
+@media(max-width:520px){
+  body{letter-spacing:-0.004em}
+  .hero-title{line-height:1.18}
+  .method-item{padding:24px 18px}
+  .topic{padding:26px 24px}
+  .about-box,.subscribe,.intro-note,.belief-box,.closing-note{padding:30px 24px}
+  .story-step{padding:26px 24px}
+}
