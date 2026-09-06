@@ -175,3 +175,11 @@ body.share-lock{overflow:hidden}
 .read-link:hover{color:var(--accent)}
 .article-card-live .copy{position:relative}
 .article-tools button[data-share]{cursor:pointer}
+
+/* Navigation click fix: the share overlay must never intercept page clicks while closed. */
+.share-sheet-backdrop[hidden]{display:none !important;pointer-events:none !important}
+.share-sheet-backdrop{pointer-events:none}
+.share-sheet-backdrop.open{pointer-events:auto}
+.hero-home:after,.about-box:after,.featured-image:after{pointer-events:none}
+.hero-actions,.nav,.nav-links,.subscribe-actions{position:relative;z-index:10}
+.hero-actions a,.nav a,.subscribe-actions a{pointer-events:auto}

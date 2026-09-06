@@ -1,4 +1,17 @@
 (function(){
+  // Defensive navigation: keep the main CTA links independent from the share UI.
+  document.addEventListener('click', function(e){
+    const a=e.target.closest('a[data-site-nav]');
+    if(!a) return;
+    const target=a.getAttribute('data-site-nav');
+    if(target==='columns'){
+      e.preventDefault();
+      document.getElementById('columns')?.scrollIntoView({behavior:'smooth',block:'start'});
+    } else if(target==='about'){
+      e.preventDefault();
+      window.location.href='about.html';
+    }
+  });
   const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
 
   const cfg=window.SPORTS_VIBE_CONFIG?.share||{};

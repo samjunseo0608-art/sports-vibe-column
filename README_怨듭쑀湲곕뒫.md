@@ -12,3 +12,7 @@
 `assets/site-config.js`의 `kakaoJavaScriptKey`에 키를 입력하고 Kakao Developers에서 GitHub Pages 도메인을 JavaScript SDK 도메인과 제품 링크 웹 도메인으로 등록하면 카카오톡 버튼이 직접 Kakao Share를 호출합니다.
 
 현재 키를 비워둔 상태에서도 모바일 공유창을 통해 카카오톡으로 보낼 수 있습니다.
+
+
+## 읽어보기 링크 오류 수정
+메인 칼럼 카드는 이미지, 제목, `읽어보기 →` 링크를 각각 명시적인 칼럼 링크로 분리했습니다. 공유 기능은 `button[data-share]`에만 연결되어 칼럼 링크 클릭과 충돌하지 않습니다.
