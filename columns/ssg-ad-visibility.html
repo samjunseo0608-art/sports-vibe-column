@@ -2,6 +2,9 @@
 
 <html lang="ko">
 <head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' data: https://cdn.jsdelivr.net; script-src 'self' https://t1.kakaocdn.net; connect-src 'self' https://fyxulzbmgqiunxowsfsi.supabase.co; img-src 'self' data: https://thumb.mt.co.kr https://cdn.m-joongang.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>야구장 광고, 어디가 진짜 좋은 자리인가 — SSG 랜더스필드 현장 노출가치 분석 | 체대생의 스포츠 바이브코딩</title>
@@ -197,6 +200,86 @@ body.share-lock{overflow:hidden}
 
 
 .social-share-hint{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:18px auto 0;max-width:1100px;padding:12px 16px;border-top:1px solid #e6ebf0;border-bottom:1px solid #e6ebf0;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;color:#65758a;font-size:13px;line-height:1.6}.social-share-hint span:first-child{font-weight:800;color:#183451}.social-share-hint span:last-child{text-align:right}@media(max-width:640px){.social-share-hint{align-items:flex-start;flex-direction:column;gap:4px}.social-share-hint span:last-child{text-align:left}}
+
+
+/* ===== PUBLIC RELEASE: square cards + mobile readability ===== */
+body{overflow-x:hidden}
+article,.question,.callout,.source-card,.stat,figure img,.table-wrap,.formula,.visual-chip,.photo-card,.visual-break,.evidence-box,.road-card,.why-box,.zone-table-wrap,.scale-card,.basis-card,.model-note,.zone-derivation,.zone-formula span,.calc-overview,.calc-step-card,.geometry-card,.svg-wrap,.formula-lite,.formula-lite code,.calc-eq span,.worked-example,.article-tools a,.article-tools button,.social-share-panel,.social-share-btn,.social-icon,.comments-card,.comment-ready,.kicker,.tag{border-radius:0!important}
+.comments-card,.social-share-panel,article{box-shadow:none!important}
+.table-wrap{-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain}
+figure img{max-width:100%;height:auto}
+
+@media(max-width:760px){
+  .column-sitebar{height:auto;position:sticky;top:0;z-index:90}
+  .column-sitebar .inner{width:100%;padding:10px 14px;display:flex;flex-wrap:wrap;gap:9px 14px}
+  .column-brand{font-size:13px;line-height:1.35;min-width:0}
+  .column-brand .mark{width:29px;height:29px;border-radius:0!important}
+  .column-nav{display:flex!important;width:100%;gap:0;border-top:1px solid #edf0f3;padding-top:6px;justify-content:space-between}
+  .column-nav a{flex:1;text-align:center;padding:8px 5px;font-size:12px}
+  .hero{padding:44px 16px 38px}
+  .hero-inner{max-width:none}
+  .kicker{font-size:11px;padding:6px 9px;margin-bottom:16px;letter-spacing:.02em}
+  h1{font-size:clamp(32px,9vw,42px);line-height:1.2;letter-spacing:-.025em;margin-bottom:14px}
+  h1 .title-line:last-child{white-space:normal}
+  .subtitle{font-size:16px;line-height:1.65}
+  .hero-note{font-size:13.5px;line-height:1.78;margin-top:22px;padding-left:12px}
+  .layout{display:block;padding:0 0 52px}
+  .toc{display:none}
+  article{padding:30px 16px;background:#fff;border:0;border-radius:0!important}
+  article section{scroll-margin-top:110px}
+  section{padding-top:10px;margin-top:18px}
+  h2{font-size:25px;line-height:1.4;letter-spacing:-.02em;margin:38px 0 16px}
+  h3{font-size:19px;line-height:1.5;margin:28px 0 10px}
+  p{font-size:15px;line-height:1.9;margin-bottom:18px}
+  .lead{font-size:17px;line-height:1.9}
+  .question{font-size:20px;line-height:1.6;margin:26px 0;padding:18px 16px}
+  .callout,.source-card,.visual-break,.evidence-box,.why-box,.model-note,.zone-derivation,.calc-overview,.geometry-card,.worked-example{padding:16px!important}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  .stat{min-height:150px!important;padding:18px 14px!important;grid-template-rows:auto auto 1fr!important}
+  .stat b,.stat-value{font-size:22px!important;min-height:auto!important}
+  .stat span{font-size:12.5px!important;line-height:1.55!important}
+  .visual-strip{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  .visual-chip{min-height:120px!important;padding:14px 10px!important}
+  .photo-gallery{grid-template-columns:1fr!important;gap:12px!important}
+  .photo-card img{height:auto!important;aspect-ratio:16/9!important}
+  .photo-card .cap{min-height:0!important;padding:13px 14px 15px!important}
+  .method-roadmap,.zone-grid,.basis-grid,.geometry-grid,.calc-flow{grid-template-columns:1fr!important}
+  .simple-scale{grid-template-columns:1fr!important;gap:8px}
+  .basis-card,.road-card,.calc-step-card{min-height:0!important}
+  .calc-step-card{grid-template-rows:auto!important;text-align:left!important;padding:16px!important}
+  .calc-step-card .n,.calc-step-card .e,.calc-step-card b,.calc-step-card p,.calc-step-card em{justify-content:flex-start!important}
+  .zone-formula{grid-template-columns:1fr 1fr!important}
+  .zone-formula i{display:none!important}
+  .zone-formula .total{grid-column:1/-1}
+  .zone-formula span{min-height:66px;padding:8px}
+  .table-wrap{margin:18px 0 26px}
+  table{font-size:12.5px;line-height:1.5}
+  th,td{padding:9px 10px}
+  .ranking table{min-width:900px}.wide table{min-width:760px}
+  .quote{font-size:17px;line-height:1.7;margin:24px 0;padding-left:14px}
+  .article-tools{padding:22px 16px 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .article-tools a,.article-tools button{text-align:center;padding:11px 10px;font-size:12.5px}
+  .social-share-panel{margin:16px 0 10px;padding:24px 16px;border-left:0;border-right:0}
+  .social-share-head h2{font-size:24px;line-height:1.4}
+  .social-share-head p{font-size:13px;line-height:1.7}
+  .social-share-buttons{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  .social-share-btn{min-height:72px!important;padding:10px!important;gap:9px!important}
+  .social-icon{width:34px!important;height:34px!important;flex-basis:34px!important}
+  .social-share-btn strong{font-size:12.5px!important}.social-share-btn small{font-size:10px!important}
+  .comments-section{margin:42px 0 62px;padding:0 16px}
+  .comments-card{padding:22px 16px!important;border-left:0;border-right:0}
+  .comments-card h2{font-size:23px;line-height:1.4}
+  .comments-card>p{font-size:13px;line-height:1.75}
+  .column-footer{padding:26px 16px}.column-footer .inner{flex-direction:column;line-height:1.65}
+}
+@media(max-width:430px){
+  .stats,.visual-strip,.social-share-buttons{grid-template-columns:1fr!important}
+  .stat{min-height:125px!important}
+  .social-share-btn{min-height:64px!important}
+  h1{font-size:32px}
+  .article-tools{grid-template-columns:1fr}
+}
+
 </style>
 
 <style id="interaction-reset-v0615">
@@ -211,7 +294,7 @@ html{scroll-behavior:smooth}
 </style>
 </head>
 <body>
-<div class="column-sitebar"><div class="inner"><a class="column-brand" href="../index.html"><span class="mark">VC</span><span>체대생의 스포츠 바이브코딩</span></a><div class="column-nav"><a href="../index.html">홈</a><a href="../index.html#columns">칼럼</a><a href="../about.html">글쓴이</a></div></div></div>
+<div class="column-sitebar"><div class="inner"><a class="column-brand" href="/sports-vibe-column/"><span class="mark">VC</span><span>체대생의 스포츠 바이브코딩</span></a><div class="column-nav"><a href="/sports-vibe-column/">홈</a><a href="/sports-vibe-column/#columns">칼럼</a><a href="/sports-vibe-column/about.html">글쓴이</a></div></div></div>
 <header class="hero">
 <div class="hero-inner">
 <span class="kicker">대학생의 스포츠산업 x 바이브코딩 실험</span>
@@ -256,11 +339,11 @@ html{scroll-behavior:smooth}
 <p class="news-intro">제안서 이미지는 분석값을 확인하는 자료로만 두고, 칼럼에서는 실제 경기장 분위기가 보이도록 공개 웹 기사 사진을 사용했다. 아래 사진처럼 외야 펜스와 전광판 주변에는 여러 광고가 동시에 노출된다.</p>
 <div class="photo-gallery">
 <div class="photo-card">
-<img alt="인천 SSG랜더스필드 외야 펜스와 전광판 주변 광고" src="https://thumb.mt.co.kr/cdn-cgi/image/f%3Davif/21/2026/04/2026041909432686751_2.jpg"/>
+<img loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="인천 SSG랜더스필드 외야 펜스와 전광판 주변 광고" src="https://thumb.mt.co.kr/cdn-cgi/image/f%3Davif/21/2026/04/2026041909432686751_2.jpg"/>
 <div class="cap"><b>외야를 바라볼 때 보이는 광고들</b>외야 펜스, 전광판 주변, 관중석 벽면에 광고가 여러 층으로 배치돼 있다. 이번 분석은 이 가운데 고정 펜스 광고가 관중석에서 어느 각도로 보이는지를 비교했다.<br/><a class="source-link" href="https://www.mt.co.kr/living/2026/04/19/2026041909432686751" rel="noopener" target="_blank">사진·기사: 머니투데이 (2026.04.19) ↗</a></div>
 </div>
 <div class="photo-card">
-<img alt="SSG 랜더스필드 경기 중 전광판과 외야 광고" src="https://cdn.m-joongang.com/news/photo/202307/20230719_6_338140.jpg"/>
+<img loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="SSG 랜더스필드 경기 중 전광판과 외야 광고" src="https://cdn.m-joongang.com/news/photo/202307/20230719_6_338140.jpg"/>
 <div class="cap"><b>경기를 보는 동안 광고는 시야 안에 함께 남는다</b>경기 장면과 전광판, 외야 광고가 한 화면 안에 같이 들어온다. 즉 야구장 광고는 단순히 ‘지나가며 보는’ 옥외광고와 달리 관중이 같은 공간에 오래 머무는 특징이 있다.<br/><a class="source-link" href="https://www.m-joongang.com/news/articleView.html?idxno=338140" rel="noopener" target="_blank">사진·기사: 월간중앙 ↗</a></div>
 </div>
 </div>
@@ -500,7 +583,7 @@ html{scroll-behavior:smooth}
 </article>
 </div>
 
-<div class="article-tools"><a href="../index.html#columns">← 칼럼 목록</a><a href="#share" class="share-jump">공유하기</a></div>
+<div class="article-tools"><a href="/sports-vibe-column/#columns">← 칼럼 목록</a><a href="#share" class="share-jump">공유하기</a></div>
 <section class="social-share-panel" id="share" aria-labelledby="share-title">
   <div class="social-share-head">
     <div><span class="social-share-kicker">SHARE</span><h2 id="share-title">이 글 함께 나누기</h2><p>원하는 채널을 선택해 칼럼 링크를 공유할 수 있습니다.</p></div>
@@ -517,8 +600,8 @@ html{scroll-behavior:smooth}
   <p class="social-share-help">※ 카카오톡 친구 선택창을 웹에서 바로 열려면 Kakao Developers JavaScript 키가 필요합니다. 키가 없을 때는 모바일 공유 메뉴 또는 링크 복사 방식으로 동작합니다.</p>
 </section>
 <section class="comments-section" id="comments"><div class="comments-card"><h2>💬 이 분석에 대해 이야기해 주세요</h2><p>다른 해석, 모델의 아쉬운 점, 다음에 분석해봤으면 하는 주제를 남겨주세요. 칼럼마다 댓글이 따로 쌓이도록 구성했습니다.</p><div id="comments-widget"></div></div></section>
-<footer class="column-footer"><div class="inner"><div><strong>체대생의 스포츠 바이브코딩</strong><br>스포츠 산업을 질문하고 분석하는 기록</div><div><a href="../index.html">홈으로</a> · <a href="../about.html">글쓴이 소개</a></div></div></footer>
-<script src="../assets/site-config.js?v=20260907-0615"></script><script src="../assets/comments.js?v=20260907-0615"></script><script src="../assets/site.js?v=20260907-0615"></script>
+<footer class="column-footer"><div class="inner"><div><strong>체대생의 스포츠 바이브코딩</strong><br>스포츠 산업을 질문하고 분석하는 기록</div><div><a href="/sports-vibe-column/">홈으로</a> · <a href="/sports-vibe-column/about.html">글쓴이 소개</a></div></div></footer>
+<script src="../assets/site-config.js?v=20260907-0430"></script><script src="../assets/comments.js?v=20260907-0430"></script><script src="../assets/site.js?v=20260907-0430"></script>
 
 </body>
 </html>
