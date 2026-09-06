@@ -1,9 +1,10 @@
 window.SPORTS_VIBE_CONFIG = {
   comments: {
-    provider: "cusdis",
-    cusdis: {
-      appId: "dc0876c8-d3f7-4fed-8798-296dd4511e7c",
-      host: "https://cusdis.com"
+    provider: "supabase",
+    supabase: {
+      url: "https://fyxulzbmgqiunxowsfsi.supabase.co",
+      publishableKey: "sb_publishable_P0H6Ce5_7Z3ZEND36_cZTw_2SOjTVCU",
+      table: "comments"
     }
   }
 };
