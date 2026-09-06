@@ -141,7 +141,7 @@
       rows.forEach(row => listEl.appendChild(makeComment(row)));
     } catch (err) {
       if (!silent) {
-        listEl.innerHTML = '<div class="sv-comment-error">댓글을 불러오지 못했습니다. Supabase의 comments 테이블과 RLS 설정을 확인해주세요.</div>';
+        listEl.innerHTML = '<div class="sv-comment-error">댓글 저장소 연결이 아직 완료되지 않았습니다. Supabase SQL Editor에서 SUPABASE_댓글_초기설정.sql을 한 번 실행해주세요.</div>';
       }
     }
   }

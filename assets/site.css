@@ -183,3 +183,12 @@ body.share-lock{overflow:hidden}
 .hero-home:after,.about-box:after,.featured-image:after{pointer-events:none}
 .hero-actions,.nav,.nav-links,.subscribe-actions{position:relative;z-index:10}
 .hero-actions a,.nav a,.subscribe-actions a{pointer-events:auto}
+
+/* interaction reset 2026-09-07 06:15 */
+html{scroll-behavior:smooth}
+a,button{touch-action:manipulation}
+.hero-home:after,.about-box:after,.featured-image:after{pointer-events:none!important}
+.site-header,.nav,.hero-inner,.hero-actions,.method-strip,main,.article-card,.article-card .copy,.subscribe,.subscribe-actions{position:relative}
+.site-header{z-index:60}.hero-inner,.hero-actions,.method-strip,.article-card .copy,.subscribe-actions{z-index:2}
+.nav a,.hero-actions a,.article-card a,.subscribe-actions a{pointer-events:auto!important}
+.share-sheet-backdrop{display:none!important;pointer-events:none!important}
