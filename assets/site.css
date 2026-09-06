@@ -271,3 +271,34 @@ body{overflow-x:hidden}
 .writer-email strong{overflow-wrap:anywhere;font-size:18px;line-height:1.45;letter-spacing:-.01em}
 .writer-email em{margin-top:14px;color:var(--muted);font-size:12px;font-style:normal;font-weight:800}
 @media(max-width:700px){.writer-contact{grid-template-columns:1fr;gap:18px;padding:24px 20px;margin-bottom:38px}.writer-contact h2{font-size:24px}.writer-contact p{font-size:13px}.writer-email{padding:20px}.writer-email strong{font-size:17px}}
+
+
+/* ===== FINAL VISUAL BALANCE: mix rounded editorial cards with structured data blocks ===== */
+/* Large editorial surfaces */
+.article-card{border-radius:22px!important;overflow:hidden;box-shadow:0 12px 34px rgba(16,36,60,.07)!important}
+.topic{border-radius:18px!important;box-shadow:0 8px 24px rgba(16,36,60,.04)!important}
+.about-box{border-radius:28px!important;box-shadow:0 16px 42px rgba(7,24,43,.12)!important}
+.subscribe{border-radius:22px!important;box-shadow:0 10px 30px rgba(16,36,60,.05)!important}
+.home-profile,.intro-note,.closing-note{border-radius:22px!important;box-shadow:0 8px 24px rgba(16,36,60,.04)!important}
+.belief-box{border-radius:26px!important}.belief-grid>div{border-radius:14px!important}
+.story-step,.principle{border-radius:16px!important}
+.writer-contact{border-radius:22px!important;box-shadow:0 8px 26px rgba(16,36,60,.04)!important}
+.writer-email{border-radius:16px!important}
+/* Method strip is deliberately more architectural: rounded shell, square internal divisions. */
+.method-card{border-radius:20px!important;overflow:hidden;box-shadow:0 14px 36px rgba(16,36,60,.07)!important}
+.method-item{border-radius:0!important}
+/* Controls and labels */
+.btn{border-radius:12px!important}
+.tag,.count-pill,.writer-tags span,.eyebrow{border-radius:999px!important}
+.topic-icon,.brand-mark{border-radius:12px!important}
+/* Keep footer / section structure crisp; cards remain visually distinct. */
+@media(max-width:760px){
+  .article-card{border-radius:18px!important}
+  .topic{border-radius:16px!important}
+  .about-box{border-radius:22px!important}
+  .subscribe{border-radius:18px!important}
+  .method-card{border-radius:16px!important}
+  .writer-contact{border-radius:18px!important}
+  .writer-email{border-radius:14px!important}
+  .brand-mark{border-radius:10px!important}
+}
