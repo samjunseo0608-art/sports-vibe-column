@@ -2,35 +2,19 @@
 
 <html lang="ko">
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' data: https://cdn.jsdelivr.net; script-src 'self' https://t1.kakaocdn.net; connect-src 'self' https://fyxulzbmgqiunxowsfsi.supabase.co; img-src 'self' data: https://thumb.mt.co.kr https://cdn.m-joongang.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>야구장 광고, 어디가 진짜 좋은 자리인가 — SSG 랜더스필드 현장 노출가치 분석 | 체대생의 스포츠 바이브코딩</title>
-<meta name="description" content="SSG 랜더스필드의 광고 구좌를 관중석 시야각과 좌석 위치를 기준으로 비교한 스포츠 산업 데이터 칼럼입니다."/>
-<link rel="canonical" href="https://samjunseo0608-art.github.io/sports-vibe-column/columns/ssg-ad-visibility.html"/>
-<meta property="og:type" content="article"/>
-<meta property="og:site_name" content="체대생의 스포츠 바이브코딩"/>
-<meta property="og:title" content="야구장 광고, 어디가 진짜 좋은 자리인가"/>
-<meta property="og:description" content="SSG 랜더스필드 광고 구좌를 관중석 시야각과 좌석 위치를 기준으로 데이터로 비교했습니다."/>
-<meta property="og:url" content="https://samjunseo0608-art.github.io/sports-vibe-column/columns/ssg-ad-visibility.html"/>
-<meta property="og:image" content="https://thumb.mt.co.kr/cdn-cgi/image/f%3Davif/21/2026/04/2026041909432686751_2.jpg"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="야구장 광고, 어디가 진짜 좋은 자리인가"/>
-<meta name="twitter:description" content="SSG 랜더스필드 광고 구좌를 관중석 시야각과 좌석 위치를 기준으로 데이터로 비교했습니다."/>
-<meta name="twitter:image" content="https://thumb.mt.co.kr/cdn-cgi/image/f%3Davif/21/2026/04/2026041909432686751_2.jpg"/>
 <style>
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 :root {
   --ink:#182435; --muted:#657184; --line:#e5e9ee; --paper:#ffffff;
   --soft:#f6f8fa; --navy:#173a5e; --red:#cf1736; --green:#315f2d;
   --accent:#9e1b32; --shadow:0 14px 36px rgba(20,34,51,.09);
 }
 *{box-sizing:border-box}
-button,input,textarea,select{font-family:inherit}
 html{scroll-behavior:smooth}
-body{margin:0;background:#f3f5f7;color:var(--ink);font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;line-height:1.82;word-break:keep-all}
+body{margin:0;background:#f3f5f7;color:var(--ink);font-family:"Pretendard",sans-serif;line-height:1.82;word-break:keep-all}
 a{color:inherit}
 .hero{position:relative;overflow:hidden;background:
   radial-gradient(circle at 84% 16%,rgba(255,124,124,.26) 0%,rgba(255,124,124,0) 26%),
@@ -76,7 +60,7 @@ td{padding:10px 12px;border-bottom:1px solid #edf0f2;vertical-align:top}
 tbody tr:last-child td{border-bottom:0}
 .ranking table{min-width:1120px}
 .wide table{min-width:900px}
-.formula{font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;font-size:18px;text-align:center;background:#152f4a;color:#fff;border-radius:12px;padding:18px 20px;margin:22px 0}
+.formula{font-family:"Pretendard",sans-serif;font-size:18px;text-align:center;background:#152f4a;color:#fff;border-radius:12px;padding:18px 20px;margin:22px 0}
 .numbered{counter-reset:item}
 .numbered .item{counter-increment:item;margin:20px 0;padding-left:46px;position:relative}
 .numbered .item:before{content:counter(item);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#173a5e;color:#fff;font-weight:700;font-size:13px}
@@ -174,145 +158,17 @@ tbody tr:last-child td{border-bottom:0}
 
 
 /* ===== column site shell ===== */
-.column-sitebar{height:64px;background:#fff;border-bottom:1px solid #e4e9ef;display:flex;align-items:center;position:relative;z-index:30;font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif}
+.column-sitebar{height:64px;background:#fff;border-bottom:1px solid #e4e9ef;display:flex;align-items:center;position:relative;z-index:30;font-family:"Pretendard",sans-serif}
 .column-sitebar .inner{width:min(1120px,calc(100% - 40px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
 .column-brand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:850;text-decoration:none;color:#10243c}.column-brand .mark{width:31px;height:31px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(145deg,#102f50,#e22846);color:white;font-size:12px}.column-nav{display:flex;gap:18px;font-size:13px;font-weight:750;color:#68768a}.column-nav a{text-decoration:none}.column-nav a:hover{color:#e22846}
 .article-tools{max-width:1050px;margin:0 auto;padding:32px 22px 0;display:flex;justify-content:flex-end;gap:10px}.article-tools button,.article-tools a{border:1px solid #e2e7ec;background:#fff;border-radius:12px;padding:10px 14px;color:#173a5e;font:700 13px "Pretendard";text-decoration:none;cursor:pointer}
-.comments-section{max-width:1050px;margin:70px auto 90px;padding:0 22px;font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif}.comments-card{background:#fff;border:1px solid #e3e8ee;border-radius:24px;padding:34px;box-shadow:0 14px 36px rgba(20,34,51,.06)}.comments-card h2{font-size:28px;letter-spacing:-.04em;margin:0 0 8px;color:#182435}.comments-card>p{color:#6a7688;margin:0 0 24px;line-height:1.7}.comment-ready{display:flex;gap:18px;align-items:flex-start;background:#f6f8fa;border-radius:18px;padding:22px}.comment-icon{font-size:28px}.comment-ready strong{font-size:16px}.comment-ready p{font-size:13px;color:#6a7688;line-height:1.75;margin:6px 0 0}.comment-ready code{background:#edf1f5;padding:2px 5px;border-radius:5px}.column-footer{background:#0c2946;color:#fff;padding:32px 22px;font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif}.column-footer .inner{max-width:1050px;margin:auto;display:flex;justify-content:space-between;gap:20px;font-size:13px;color:rgba(255,255,255,.65)}.column-footer strong{color:#fff}.column-footer a{color:#fff;text-decoration:none}
+.comments-section{max-width:1050px;margin:70px auto 90px;padding:0 22px;font-family:"Pretendard",sans-serif}.comments-card{background:#fff;border:1px solid #e3e8ee;border-radius:24px;padding:34px;box-shadow:0 14px 36px rgba(20,34,51,.06)}.comments-card h2{font-size:28px;letter-spacing:-.04em;margin:0 0 8px;color:#182435}.comments-card>p{color:#6a7688;margin:0 0 24px;line-height:1.7}.comment-ready{display:flex;gap:18px;align-items:flex-start;background:#f6f8fa;border-radius:18px;padding:22px}.comment-icon{font-size:28px}.comment-ready strong{font-size:16px}.comment-ready p{font-size:13px;color:#6a7688;line-height:1.75;margin:6px 0 0}.comment-ready code{background:#edf1f5;padding:2px 5px;border-radius:5px}.column-footer{background:#0c2946;color:#fff;padding:32px 22px;font-family:"Pretendard",sans-serif}.column-footer .inner{max-width:1050px;margin:auto;display:flex;justify-content:space-between;gap:20px;font-size:13px;color:rgba(255,255,255,.65)}.column-footer strong{color:#fff}.column-footer a{color:#fff;text-decoration:none}
 @media(max-width:700px){.column-nav{display:none}.comments-card{padding:23px}.column-footer .inner{flex-direction:column}}
 
-
-/* Rich social share sheet */
-body.share-lock{overflow:hidden}
-.share-sheet-backdrop{position:fixed;inset:0;z-index:9999;background:rgba(7,19,33,.46);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .18s ease}
-.share-sheet-backdrop.open{opacity:1}
-.share-sheet{width:min(620px,100%);background:#fff;border:1px solid rgba(21,45,70,.1);border-radius:28px;box-shadow:0 28px 80px rgba(7,24,42,.28);padding:28px;transform:translateY(14px) scale(.985);transition:transform .18s ease;font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;color:#182435}
-.share-sheet-backdrop.open .share-sheet{transform:none}
-.share-sheet-grip{display:none;width:42px;height:4px;background:#d7dee7;border-radius:999px;margin:0 auto 18px}
-.share-sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:24px}
-.share-sheet-head>div>span{display:block;color:#b31e35;font-size:11px;font-weight:900;letter-spacing:.14em;margin-bottom:6px}.share-sheet-head h3{margin:0;font-size:25px;letter-spacing:-.025em;line-height:1.35}.share-sheet-head p{margin:7px 0 0;color:#758194;font-size:14px;line-height:1.6}.share-sheet-close{flex:0 0 auto;width:38px;height:38px;border-radius:50%;border:1px solid #e0e6ed;background:#fff;color:#4d5e72;font-size:25px;line-height:1;cursor:pointer}.share-sheet-close:hover{background:#f4f7fa}
-.share-platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.share-platform-grid button{min-height:126px;border:1px solid #e4e9ef;border-radius:19px;background:#fff;padding:17px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;color:#182435;font-family:inherit;transition:.18s transform,.18s box-shadow,.18s border-color}.share-platform-grid button:hover{transform:translateY(-2px);border-color:#cdd6e0;box-shadow:0 10px 28px rgba(16,43,69,.08)}.share-platform-grid strong{font-size:14px;line-height:1.3}.share-platform-grid small{font-size:11.5px;color:#8a96a5;line-height:1.3}
-.share-logo{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;font-size:19px;font-weight:900;margin-bottom:2px}.share-logo-kakao{background:#FEE500;color:#191919}.share-logo-instagram{color:#fff;background:radial-gradient(circle at 30% 105%,#fdf497 0 9%,#fd5949 35%,#d6249f 62%,#285AEB 100%);font-size:26px}.share-logo-x{background:#111;color:#fff}.share-logo-facebook{background:#1877F2;color:#fff;font-family:Arial,sans-serif;font-size:25px}.share-logo-copy{background:#eff3f7;color:#334c65;font-size:23px}.share-logo-more{background:#eff3f7;color:#334c65;letter-spacing:1px;font-size:16px}.share-logo-email{background:#edf3fb;color:#244b73;font-size:19px}.share-sheet-note{margin-top:18px;padding:12px 14px;border-radius:13px;background:#f6f8fa;color:#7b8796;font-size:12px;line-height:1.6;text-align:center}
-.share-toast{position:fixed;left:50%;bottom:28px;z-index:10050;transform:translate(-50%,16px);background:#142a42;color:#fff;border-radius:999px;padding:11px 17px;font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(10,27,45,.22);opacity:0;pointer-events:none;transition:.18s opacity,.18s transform}.share-toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:640px){.share-sheet-backdrop{align-items:flex-end;padding:0}.share-sheet{width:100%;border-radius:26px 26px 0 0;padding:16px 18px 24px;transform:translateY(100%);max-height:90vh;overflow:auto}.share-sheet-backdrop.open .share-sheet{transform:translateY(0)}.share-sheet-grip{display:block}.share-sheet-head{margin-bottom:18px}.share-sheet-head h3{font-size:22px}.share-platform-grid{grid-template-columns:repeat(3,1fr);gap:9px}.share-platform-grid button{min-height:112px;padding:14px 8px;border-radius:16px}.share-logo{width:40px;height:40px}.share-sheet-note{text-align:left}.share-toast{bottom:20px;max-width:calc(100% - 30px);white-space:nowrap}}
-
-
-.social-share-hint{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:18px auto 0;max-width:1100px;padding:12px 16px;border-top:1px solid #e6ebf0;border-bottom:1px solid #e6ebf0;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;color:#65758a;font-size:13px;line-height:1.6}.social-share-hint span:first-child{font-weight:800;color:#183451}.social-share-hint span:last-child{text-align:right}@media(max-width:640px){.social-share-hint{align-items:flex-start;flex-direction:column;gap:4px}.social-share-hint span:last-child{text-align:left}}
-
-
-/* ===== PUBLIC RELEASE: square cards + mobile readability ===== */
-body{overflow-x:hidden}
-article,.question,.callout,.source-card,.stat,figure img,.table-wrap,.formula,.visual-chip,.photo-card,.visual-break,.evidence-box,.road-card,.why-box,.zone-table-wrap,.scale-card,.basis-card,.model-note,.zone-derivation,.zone-formula span,.calc-overview,.calc-step-card,.geometry-card,.svg-wrap,.formula-lite,.formula-lite code,.calc-eq span,.worked-example,.article-tools a,.article-tools button,.social-share-panel,.social-share-btn,.social-icon,.comments-card,.comment-ready,.kicker,.tag{border-radius:0!important}
-.comments-card,.social-share-panel,article{box-shadow:none!important}
-.table-wrap{-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain}
-figure img{max-width:100%;height:auto}
-
-@media(max-width:760px){
-  .column-sitebar{height:auto;position:sticky;top:0;z-index:90}
-  .column-sitebar .inner{width:100%;padding:10px 14px;display:flex;flex-wrap:wrap;gap:9px 14px}
-  .column-brand{font-size:13px;line-height:1.35;min-width:0}
-  .column-brand .mark{width:29px;height:29px;border-radius:0!important}
-  .column-nav{display:flex!important;width:100%;gap:0;border-top:1px solid #edf0f3;padding-top:6px;justify-content:space-between}
-  .column-nav a{flex:1;text-align:center;padding:8px 5px;font-size:12px}
-  .hero{padding:44px 16px 38px}
-  .hero-inner{max-width:none}
-  .kicker{font-size:11px;padding:6px 9px;margin-bottom:16px;letter-spacing:.02em}
-  h1{font-size:clamp(32px,9vw,42px);line-height:1.2;letter-spacing:-.025em;margin-bottom:14px}
-  h1 .title-line:last-child{white-space:normal}
-  .subtitle{font-size:16px;line-height:1.65}
-  .hero-note{font-size:13.5px;line-height:1.78;margin-top:22px;padding-left:12px}
-  .layout{display:block;padding:0 0 52px}
-  .toc{display:none}
-  article{padding:30px 16px;background:#fff;border:0;border-radius:0!important}
-  article section{scroll-margin-top:110px}
-  section{padding-top:10px;margin-top:18px}
-  h2{font-size:25px;line-height:1.4;letter-spacing:-.02em;margin:38px 0 16px}
-  h3{font-size:19px;line-height:1.5;margin:28px 0 10px}
-  p{font-size:15px;line-height:1.9;margin-bottom:18px}
-  .lead{font-size:17px;line-height:1.9}
-  .question{font-size:20px;line-height:1.6;margin:26px 0;padding:18px 16px}
-  .callout,.source-card,.visual-break,.evidence-box,.why-box,.model-note,.zone-derivation,.calc-overview,.geometry-card,.worked-example{padding:16px!important}
-  .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
-  .stat{min-height:150px!important;padding:18px 14px!important;grid-template-rows:auto auto 1fr!important}
-  .stat b,.stat-value{font-size:22px!important;min-height:auto!important}
-  .stat span{font-size:12.5px!important;line-height:1.55!important}
-  .visual-strip{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
-  .visual-chip{min-height:120px!important;padding:14px 10px!important}
-  .photo-gallery{grid-template-columns:1fr!important;gap:12px!important}
-  .photo-card img{height:auto!important;aspect-ratio:16/9!important}
-  .photo-card .cap{min-height:0!important;padding:13px 14px 15px!important}
-  .method-roadmap,.zone-grid,.basis-grid,.geometry-grid,.calc-flow{grid-template-columns:1fr!important}
-  .simple-scale{grid-template-columns:1fr!important;gap:8px}
-  .basis-card,.road-card,.calc-step-card{min-height:0!important}
-  .calc-step-card{grid-template-rows:auto!important;text-align:left!important;padding:16px!important}
-  .calc-step-card .n,.calc-step-card .e,.calc-step-card b,.calc-step-card p,.calc-step-card em{justify-content:flex-start!important}
-  .zone-formula{grid-template-columns:1fr 1fr!important}
-  .zone-formula i{display:none!important}
-  .zone-formula .total{grid-column:1/-1}
-  .zone-formula span{min-height:66px;padding:8px}
-  .table-wrap{margin:18px 0 26px}
-  table{font-size:12.5px;line-height:1.5}
-  th,td{padding:9px 10px}
-  .ranking table{min-width:900px}.wide table{min-width:760px}
-  .quote{font-size:17px;line-height:1.7;margin:24px 0;padding-left:14px}
-  .article-tools{padding:22px 16px 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .article-tools a,.article-tools button{text-align:center;padding:11px 10px;font-size:12.5px}
-  .social-share-panel{margin:16px 0 10px;padding:24px 16px;border-left:0;border-right:0}
-  .social-share-head h2{font-size:24px;line-height:1.4}
-  .social-share-head p{font-size:13px;line-height:1.7}
-  .social-share-buttons{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
-  .social-share-btn{min-height:72px!important;padding:10px!important;gap:9px!important}
-  .social-icon{width:34px!important;height:34px!important;flex-basis:34px!important}
-  .social-share-btn strong{font-size:12.5px!important}.social-share-btn small{font-size:10px!important}
-  .comments-section{margin:42px 0 62px;padding:0 16px}
-  .comments-card{padding:22px 16px!important;border-left:0;border-right:0}
-  .comments-card h2{font-size:23px;line-height:1.4}
-  .comments-card>p{font-size:13px;line-height:1.75}
-  .column-footer{padding:26px 16px}.column-footer .inner{flex-direction:column;line-height:1.65}
-}
-@media(max-width:430px){
-  .stats,.visual-strip,.social-share-buttons{grid-template-columns:1fr!important}
-  .stat{min-height:125px!important}
-  .social-share-btn{min-height:64px!important}
-  h1{font-size:32px}
-  .article-tools{grid-template-columns:1fr}
-}
-
-
-
-/* ===== FINAL VISUAL BALANCE: rounded editorial UI + structured analysis ===== */
-/* Editorial / interaction surfaces use warmer rounding. Analytical surfaces stay tighter. */
-article{border-radius:22px!important;box-shadow:0 18px 50px rgba(16,36,60,.06)!important}
-.question,.callout,.source-card,.photo-card,.visual-break,.evidence-box,.why-box,.model-note,.zone-derivation,.calc-overview,.geometry-card,.worked-example{border-radius:14px!important}
-.stat,.road-card,.basis-card,.scale-card,.calc-step-card{border-radius:12px!important}
-figure img{border-radius:12px!important}
-.table-wrap,.zone-table-wrap,.formula,.svg-wrap,.formula-lite,.formula-lite code,.calc-eq span,.zone-formula span{border-radius:5px!important}
-.visual-chip{border-radius:10px!important}
-.article-tools a,.article-tools button,.social-share-btn{border-radius:12px!important}
-.social-share-panel,.comments-card,.comment-ready{border-radius:20px!important}
-.social-icon{border-radius:10px!important}
-.kicker,.tag{border-radius:999px!important}
-@media(max-width:760px){
-  article{border-radius:0!important;box-shadow:none!important}
-  .question,.callout,.source-card,.photo-card,.visual-break,.evidence-box,.why-box,.model-note,.zone-derivation,.calc-overview,.geometry-card,.worked-example{border-radius:12px!important}
-  .social-share-panel,.comments-card{border-radius:16px!important}
-  .table-wrap,.zone-table-wrap{border-radius:4px!important}
-}
-</style>
-
-<style id="interaction-reset-v0615">
-html{scroll-behavior:smooth}
-.share-sheet-backdrop{display:none!important;pointer-events:none!important}
-.column-sitebar,.column-sitebar a,.article-tools,.article-tools a,.social-share-panel,.social-share-panel a,.social-share-panel button{pointer-events:auto!important}
-.article-tools{position:relative;z-index:20}
-.social-share-panel{scroll-margin-top:24px;max-width:1050px;margin:22px auto 20px;padding:26px 22px 30px;border-top:1px solid #e4e9ef;border-bottom:1px solid #e4e9ef;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif}
-.social-share-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:18px}.social-share-kicker{display:block;color:#c91e3a;font-size:11px;font-weight:900;letter-spacing:.12em;margin-bottom:5px}.social-share-head h2{margin:0;color:#17324e;font-size:22px;line-height:1.4;letter-spacing:-.02em}.social-share-head p{margin:5px 0 0;color:#738195;font-size:13px;line-height:1.7}
-.social-share-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.social-share-btn{min-width:0;min-height:76px;display:flex;align-items:center;gap:11px;border:1px solid #e1e7ed;background:#fff;color:#1a3149;text-decoration:none;border-radius:14px;padding:12px 13px;cursor:pointer;font-family:inherit;text-align:left}.social-share-btn:hover{border-color:#cbd5df;background:#fafbfd}.social-share-btn>span:last-child{min-width:0}.social-share-btn strong{display:block;font-size:13px;line-height:1.3}.social-share-btn small{display:block;margin-top:3px;color:#8996a6;font-size:10.5px;line-height:1.35}.social-icon{flex:0 0 38px;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-weight:900;font-size:16px;background:#eef2f6;color:#223d59}.kakao .social-icon{background:#FEE500;color:#191919}.instagram .social-icon{background:radial-gradient(circle at 30% 105%,#fdf497 0 9%,#fd5949 35%,#d6249f 62%,#285AEB 100%);color:#fff;font-size:21px}.x .social-icon{background:#111;color:#fff}.facebook .social-icon{background:#1877F2;color:#fff;font-family:Arial,sans-serif;font-size:22px}.social-share-help{margin:15px 0 0;color:#8591a0;font-size:11px;line-height:1.65}
-@media(max-width:760px){.social-share-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}.social-share-panel{padding-left:18px;padding-right:18px}}@media(max-width:430px){.social-share-buttons{grid-template-columns:1fr}.social-share-btn{min-height:68px}}
 </style>
 </head>
 <body>
-<div class="column-sitebar"><div class="inner"><a class="column-brand" href="/sports-vibe-column/"><span class="mark">VC</span><span>체대생의 스포츠 바이브코딩</span></a><div class="column-nav"><a href="/sports-vibe-column/">홈</a><a href="/sports-vibe-column/#columns">칼럼</a><a href="/sports-vibe-column/about.html">글쓴이</a></div></div></div>
+<div class="column-sitebar"><div class="inner"><a class="column-brand" href="/"><span class="mark">VC</span><span>체대생의 스포츠 바이브코딩</span></a><div class="column-nav"><a href="/">홈</a><a href="/#columns">칼럼</a><a href="/about.html">소개</a></div></div></div>
 <header class="hero">
 <div class="hero-inner">
 <span class="kicker">대학생의 스포츠산업 x 바이브코딩 실험</span>
@@ -357,11 +213,11 @@ html{scroll-behavior:smooth}
 <p class="news-intro">제안서 이미지는 분석값을 확인하는 자료로만 두고, 칼럼에서는 실제 경기장 분위기가 보이도록 공개 웹 기사 사진을 사용했다. 아래 사진처럼 외야 펜스와 전광판 주변에는 여러 광고가 동시에 노출된다.</p>
 <div class="photo-gallery">
 <div class="photo-card">
-<img loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="인천 SSG랜더스필드 외야 펜스와 전광판 주변 광고" src="https://thumb.mt.co.kr/cdn-cgi/image/f%3Davif/21/2026/04/2026041909432686751_2.jpg"/>
+<img alt="인천 SSG랜더스필드 외야 펜스와 전광판 주변 광고" src="https://thumb.mt.co.kr/cdn-cgi/image/f%3Davif/21/2026/04/2026041909432686751_2.jpg"/>
 <div class="cap"><b>외야를 바라볼 때 보이는 광고들</b>외야 펜스, 전광판 주변, 관중석 벽면에 광고가 여러 층으로 배치돼 있다. 이번 분석은 이 가운데 고정 펜스 광고가 관중석에서 어느 각도로 보이는지를 비교했다.<br/><a class="source-link" href="https://www.mt.co.kr/living/2026/04/19/2026041909432686751" rel="noopener" target="_blank">사진·기사: 머니투데이 (2026.04.19) ↗</a></div>
 </div>
 <div class="photo-card">
-<img loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="SSG 랜더스필드 경기 중 전광판과 외야 광고" src="https://cdn.m-joongang.com/news/photo/202307/20230719_6_338140.jpg"/>
+<img alt="SSG 랜더스필드 경기 중 전광판과 외야 광고" src="https://cdn.m-joongang.com/news/photo/202307/20230719_6_338140.jpg"/>
 <div class="cap"><b>경기를 보는 동안 광고는 시야 안에 함께 남는다</b>경기 장면과 전광판, 외야 광고가 한 화면 안에 같이 들어온다. 즉 야구장 광고는 단순히 ‘지나가며 보는’ 옥외광고와 달리 관중이 같은 공간에 오래 머무는 특징이 있다.<br/><a class="source-link" href="https://www.m-joongang.com/news/articleView.html?idxno=338140" rel="noopener" target="_blank">사진·기사: 월간중앙 ↗</a></div>
 </div>
 </div>
@@ -601,25 +457,10 @@ html{scroll-behavior:smooth}
 </article>
 </div>
 
-<div class="article-tools"><a href="/sports-vibe-column/#columns">← 칼럼 목록</a><a href="#share" class="share-jump">공유하기</a></div>
-<section class="social-share-panel" id="share" aria-labelledby="share-title">
-  <div class="social-share-head">
-    <div><span class="social-share-kicker">SHARE</span><h2 id="share-title">이 글 함께 나누기</h2><p>원하는 채널을 선택해 칼럼 링크를 공유할 수 있습니다.</p></div>
-  </div>
-  <div class="social-share-buttons">
-    <button type="button" class="social-share-btn kakao" data-share-kakao><span class="social-icon">K</span><span><strong>카카오톡</strong><small>모바일 공유 · PC 링크 복사</small></span></button>
-    <button type="button" class="social-share-btn instagram" data-share-instagram><span class="social-icon">◎</span><span><strong>인스타그램</strong><small>모바일 공유 · PC DM</small></span></button>
-    <a class="social-share-btn x" href="https://twitter.com/intent/tweet?text=%EC%95%BC%EA%B5%AC%EC%9E%A5+%EA%B4%91%EA%B3%A0%2C+%EC%96%B4%EB%94%94%EA%B0%80+%EC%A7%84%EC%A7%9C+%EC%A2%8B%EC%9D%80+%EC%9E%90%EB%A6%AC%EC%9D%B8%EA%B0%80&url=https%3A%2F%2Fsamjunseo0608-art.github.io%2Fsports-vibe-column%2Fcolumns%2Fssg-ad-visibility.html" target="_blank" rel="noopener noreferrer"><span class="social-icon">𝕏</span><span><strong>X</strong><small>게시물로 공유</small></span></a>
-    <a class="social-share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsamjunseo0608-art.github.io%2Fsports-vibe-column%2Fcolumns%2Fssg-ad-visibility.html" target="_blank" rel="noopener noreferrer"><span class="social-icon">f</span><span><strong>Facebook</strong><small>피드로 공유</small></span></a>
-    <a class="social-share-btn email" href="mailto:?subject=%EC%95%BC%EA%B5%AC%EC%9E%A5+%EA%B4%91%EA%B3%A0%2C+%EC%96%B4%EB%94%94%EA%B0%80+%EC%A7%84%EC%A7%9C+%EC%A2%8B%EC%9D%80+%EC%9E%90%EB%A6%AC%EC%9D%B8%EA%B0%80&body=SSG+%EB%9E%9C%EB%8D%94%EC%8A%A4%ED%95%84%EB%93%9C+%EA%B4%91%EA%B3%A0%EA%B5%AC%EC%A2%8C%EB%A5%BC+%ED%98%84%EC%9E%A5+%EA%B4%80%EC%A4%91%EC%9D%98+%EC%8B%9C%EC%95%BC%EB%9D%BC%EB%8A%94+%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C+%EB%82%98%EB%88%A0+%EB%B9%84%EA%B5%90%ED%95%9C+%EC%8A%A4%ED%8F%AC%EC%B8%A0%EB%A7%88%EC%BC%80%ED%8C%85+%EB%B0%94%EC%9D%B4%EB%B8%8C%EC%BD%94%EB%94%A9+%EB%B6%84%EC%84%9D%EC%9E%85%EB%8B%88%EB%8B%A4.%0A%0Ahttps%3A%2F%2Fsamjunseo0608-art.github.io%2Fsports-vibe-column%2Fcolumns%2Fssg-ad-visibility.html"><span class="social-icon">✉</span><span><strong>이메일</strong><small>메일로 보내기</small></span></a>
-    <button type="button" class="social-share-btn copy" data-share-copy><span class="social-icon">↗</span><span><strong>링크 복사</strong><small>어디든 붙여넣기</small></span></button>
-    <button type="button" class="social-share-btn native" data-share-native><span class="social-icon">···</span><span><strong>다른 앱</strong><small>휴대폰 공유 메뉴</small></span></button>
-  </div>
-  <p class="social-share-help">※ 카카오톡 친구 선택창을 웹에서 바로 열려면 Kakao Developers JavaScript 키가 필요합니다. 키가 없을 때는 모바일 공유 메뉴 또는 링크 복사 방식으로 동작합니다.</p>
-</section>
+<div class="article-tools"><a href="/">← 칼럼 목록</a><button type="button" data-share>공유하기</button></div>
 <section class="comments-section" id="comments"><div class="comments-card"><h2>💬 이 분석에 대해 이야기해 주세요</h2><p>다른 해석, 모델의 아쉬운 점, 다음에 분석해봤으면 하는 주제를 남겨주세요. 칼럼마다 댓글이 따로 쌓이도록 구성했습니다.</p><div id="comments-widget"></div></div></section>
-<footer class="column-footer"><div class="inner"><div><strong>체대생의 스포츠 바이브코딩</strong><br>스포츠 산업을 질문하고 분석하는 기록</div><div><a href="/sports-vibe-column/">홈으로</a> · <a href="/sports-vibe-column/about.html">글쓴이 소개</a></div></div></footer>
-<script src="../assets/site-config.js?v=20260907-0430"></script><script src="../assets/comments.js?v=20260907-0430"></script><script src="../assets/site.js?v=20260907-0430"></script>
+<footer class="column-footer"><div class="inner"><div><strong>체대생의 스포츠 바이브코딩</strong><br>스포츠 산업을 질문하고 분석하는 기록</div><div><a href="/">홈으로</a> · <a href="/about.html">사이트 소개</a></div></div></footer>
+<script src="/assets/site-config.js"></script><script src="/assets/comments.js"></script><script src="/assets/site.js"></script>
 
 </body>
 </html>
