@@ -3,74 +3,405 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' data: https://cdn.jsdelivr.net; script-src 'self' https://t1.kakaocdn.net; connect-src 'self' https://fyxulzbmgqiunxowsfsi.supabase.co; img-src 'self' data: https://thumb.mt.co.kr https://cdn.m-joongang.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self';
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+    font-src 'self' data: https://cdn.jsdelivr.net;
+    script-src 'self' https://t1.kakaocdn.net;
+    connect-src 'self' https://fyxulzbmgqiunxowsfsi.supabase.co;
+    img-src 'self' data: https://thumb.mt.co.kr https://cdn.m-joongang.com;
+    object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests"
+  >
+
   <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>체대생의 스포츠 바이브코딩 | 스포츠 산업 데이터 칼럼</title>
-  <meta name="description" content="스포츠 산업을 공개 데이터와 바이브코딩으로 분석하고, 그 과정과 시사점을 함께 나누는 체대생의 칼럼 웹사이트.">
-  <link rel="stylesheet" href="assets/site.css?v=20260907-ROUNDMIX">
+
+  <title>체대생의 스포츠 바이브코딩 | 스포츠 산업 데이터 칼럼</title>
+
+  <meta
+    name="description"
+    content="스포츠 산업을 공개 데이터와 바이브코딩으로 분석하고, 그 과정과 시사점을 함께 나누는 체대생의 칼럼 웹사이트."
+  >
+
+  <link rel="stylesheet" href="/assets/site.css?v=20260907-ROUNDMIX">
 </head>
+
 <body>
+
 <header class="site-header">
   <nav class="nav">
-    <a class="brand" href="/sports-vibe-column/"><span class="brand-mark">VC</span><span>체대생의 스포츠 바이브코딩<br><span class="brand-sub">Sports Industry × Vibe Coding</span></span></a>
-    <div class="nav-links"><a href="#columns">칼럼</a><a href="#themes">주제</a><a href="/sports-vibe-column/about.html">글쓴이</a></div>
+
+    <a class="brand" href="/">
+      <span class="brand-mark">VC</span>
+      <span>
+        체대생의 스포츠 바이브코딩
+        <br>
+        <span class="brand-sub">Sports Industry × Vibe Coding</span>
+      </span>
+    </a>
+
+    <div class="nav-links">
+      <a href="/#columns">칼럼</a>
+      <a href="/#themes">주제</a>
+      <a href="/about.html">글쓴이</a>
+    </div>
+
   </nav>
 </header>
 
+
 <section class="hero-home">
+
   <div class="hero-inner">
-    <span class="eyebrow">🏟️ SPORTS INDUSTRY × 💻 VIBE CODING</span>
-    <h1 class="hero-title">스포츠 산업을<br><span class="accent">데이터로 바라보고 분석합니다.</span></h1>
-    <p class="hero-desc">현장에서 생긴 궁금증을 검증 가능한 자료로 바꾸고, 바이브코딩으로 직접 분석합니다. 결과뿐 아니라 어떤 가정을 세웠고 어디까지 해석할 수 있는지도 함께 기록합니다.</p>
-    <div class="hero-actions"><a class="btn btn-primary" href="#columns">칼럼 보기 →</a><a class="btn btn-ghost" href="/sports-vibe-column/about.html">글쓴이 소개</a></div>
+
+    <span class="eyebrow">
+      🏟️ SPORTS INDUSTRY × 💻 VIBE CODING
+    </span>
+
+    <h1 class="hero-title">
+      스포츠 산업을
+      <br>
+      <span class="accent">
+        데이터로 바라보고 분석합니다.
+      </span>
+    </h1>
+
+    <p class="hero-desc">
+      현장에서 생긴 궁금증을 검증 가능한 자료로 바꾸고,
+      바이브코딩으로 직접 분석합니다.
+      결과뿐 아니라 어떤 가정을 세웠고
+      어디까지 해석할 수 있는지도 함께 기록합니다.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="btn btn-primary" href="/#columns">
+        칼럼 보기 →
+      </a>
+
+      <a class="btn btn-ghost" href="/about.html">
+        글쓴이 소개
+      </a>
+
+    </div>
+
   </div>
+
 </section>
 
+
 <div class="method-strip">
+
   <div class="method-card">
-    <div class="method-item"><span class="method-kicker">QUESTION</span><strong>스포츠 산업의 의문</strong><span>현장에서 생긴 질문부터 시작합니다.</span></div>
-    <div class="method-item"><span class="method-kicker">DATA</span><strong>검증 가능한 자료</strong><span>공개자료와 확인 가능한 수치를 사용합니다.</span></div>
-    <div class="method-item"><span class="method-kicker">CODE</span><strong>바이브코딩 분석</strong><span>가설을 코드로 옮겨 빠르게 검증합니다.</span></div>
-    <div class="method-item"><span class="method-kicker">INSIGHT</span><strong>시사점과 토론</strong><span>결과를 해석하고 사람들과 의견을 나눕니다.</span></div>
+
+    <div class="method-item">
+      <span class="method-kicker">QUESTION</span>
+      <strong>스포츠 산업의 의문</strong>
+      <span>현장에서 생긴 질문부터 시작합니다.</span>
+    </div>
+
+    <div class="method-item">
+      <span class="method-kicker">DATA</span>
+      <strong>검증 가능한 자료</strong>
+      <span>공개자료와 확인 가능한 수치를 사용합니다.</span>
+    </div>
+
+    <div class="method-item">
+      <span class="method-kicker">CODE</span>
+      <strong>바이브코딩 분석</strong>
+      <span>가설을 코드로 옮겨 빠르게 검증합니다.</span>
+    </div>
+
+    <div class="method-item">
+      <span class="method-kicker">INSIGHT</span>
+      <strong>시사점과 토론</strong>
+      <span>결과를 해석하고 사람들과 의견을 나눕니다.</span>
+    </div>
+
   </div>
+
 </div>
 
+
 <main>
+
   <section id="columns" class="columns-home">
-    <div class="section-head"><div><h2>칼럼 목록</h2><p>스포츠 산업의 질문을 데이터와 코드로 직접 확인한 분석 기록입니다.</p></div><span class="count-pill">현재 1편</span></div>
-    <div class="article-list article-list-home">
-      <article class="article-card article-card-live">
-        <a class="thumb article-thumb-link" href="/sports-vibe-column/columns/ssg-ad-visibility.html" aria-label="야구장 광고, 어디가 진짜 좋은 자리인가 칼럼 읽기" style="background-image:url('https://thumb.mt.co.kr/cdn-cgi/image/f%3Davif/21/2026/04/2026041909432686751_2.jpg')"></a>
-        <div class="copy">
-          <span class="tag">⚾ 스포츠마케팅 · 바이브코딩</span>
-          <h3><a class="article-title-link" href="/sports-vibe-column/columns/ssg-ad-visibility.html">야구장 광고, 어디가 진짜 좋은 자리인가</a></h3>
-          <p>SSG 랜더스필드 광고구좌를 현장 관중의 시야라는 한 가지 기준으로 나눠 비교했습니다.</p>
-          <div class="card-meta"><span>SSG 랜더스필드</span><span>시야각 분석</span></div>
-          <a class="read-link" href="/sports-vibe-column/columns/ssg-ad-visibility.html">읽어보기 →</a>
-        </div>
-      </article>
-      <div class="article-card coming"><div class="thumb"><span>COMING NEXT</span></div><div class="copy"><span class="tag tag-soft">다음 분석 준비 중</span><h3>다음 스포츠 산업 질문을 찾고 있습니다</h3><p>경기장, 팬, 스폰서십, 스포츠 행정 등 공개자료로 확인할 수 있는 새로운 주제를 이어갑니다.</p></div></div>
+
+    <div class="section-head">
+
+      <div>
+        <h2>칼럼 목록</h2>
+        <p>
+          스포츠 산업의 질문을 데이터와 코드로 직접 확인한 분석 기록입니다.
+        </p>
+      </div>
+
+      <span class="count-pill">
+        현재 1편
+      </span>
+
     </div>
+
+
+    <div class="article-list article-list-home">
+
+      <article class="article-card article-card-live">
+
+        <a
+          class="thumb article-thumb-link"
+          href="/columns/ssg-ad-visibility.html"
+          aria-label="야구장 광고, 어디가 진짜 좋은 자리인가 칼럼 읽기"
+          style="background-image:url('https://thumb.mt.co.kr/cdn-cgi/image/f%3Davif/21/2026/04/2026041909432686751_2.jpg')">
+        </a>
+
+        <div class="copy">
+
+          <span class="tag">
+            ⚾ 스포츠마케팅 · 바이브코딩
+          </span>
+
+          <h3>
+            <a
+              class="article-title-link"
+              href="/columns/ssg-ad-visibility.html">
+              야구장 광고, 어디가 진짜 좋은 자리인가
+            </a>
+          </h3>
+
+          <p>
+            SSG 랜더스필드 광고구좌를
+            현장 관중의 시야라는 한 가지 기준으로 나눠 비교했습니다.
+          </p>
+
+          <div class="card-meta">
+            <span>SSG 랜더스필드</span>
+            <span>시야각 분석</span>
+          </div>
+
+          <a
+            class="read-link"
+            href="/columns/ssg-ad-visibility.html">
+            읽어보기 →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <div class="article-card coming">
+
+        <div class="thumb">
+          <span>COMING NEXT</span>
+        </div>
+
+        <div class="copy">
+
+          <span class="tag tag-soft">
+            다음 분석 준비 중
+          </span>
+
+          <h3>
+            다음 스포츠 산업 질문을 찾고 있습니다
+          </h3>
+
+          <p>
+            경기장, 팬, 스폰서십, 스포츠 행정 등
+            공개자료로 확인할 수 있는 새로운 주제를 이어갑니다.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </section>
+
 
   <section id="themes">
-    <div class="section-head"><div><h2>이 사이트에서 다룰 것</h2><p>코딩 기술 자체보다 스포츠 산업에서 어떤 질문을 만들고 어떤 근거로 설명할 수 있는지를 중심에 둡니다.</p></div></div>
-    <div class="topic-grid">
-      <div class="topic"><div class="topic-icon">📣</div><h3>스포츠 마케팅</h3><p>광고, 스폰서십, 팬 접점처럼 현장에서 당연하게 받아들이던 요소를 데이터로 다시 봅니다.</p><small>Advertising · Sponsorship · CRM</small></div>
-      <div class="topic"><div class="topic-icon">🏛️</div><h3>스포츠 행정</h3><p>정책, 조직, 시설과 운영처럼 스포츠 산업을 움직이는 구조를 객관적인 자료로 살펴봅니다.</p><small>Policy · Organization · Operation</small></div>
-      <div class="topic"><div class="topic-icon">🧪</div><h3>바이브코딩 실험</h3><p>질문을 구체적으로 정의하고 AI와 코드를 활용해 분석 도구를 만들어가는 과정을 공개합니다.</p><small>Question → Data → Code → Insight</small></div>
+
+    <div class="section-head">
+
+      <div>
+
+        <h2>
+          이 사이트에서 다룰 것
+        </h2>
+
+        <p>
+          코딩 기술 자체보다 스포츠 산업에서 어떤 질문을 만들고
+          어떤 근거로 설명할 수 있는지를 중심에 둡니다.
+        </p>
+
+      </div>
+
     </div>
+
+
+    <div class="topic-grid">
+
+      <div class="topic">
+
+        <div class="topic-icon">
+          📣
+        </div>
+
+        <h3>
+          스포츠 마케팅
+        </h3>
+
+        <p>
+          광고, 스폰서십, 팬 접점처럼
+          현장에서 당연하게 받아들이던 요소를 데이터로 다시 봅니다.
+        </p>
+
+        <small>
+          Advertising · Sponsorship · CRM
+        </small>
+
+      </div>
+
+
+      <div class="topic">
+
+        <div class="topic-icon">
+          🏛️
+        </div>
+
+        <h3>
+          스포츠 행정
+        </h3>
+
+        <p>
+          정책, 조직, 시설과 운영처럼
+          스포츠 산업을 움직이는 구조를 객관적인 자료로 살펴봅니다.
+        </p>
+
+        <small>
+          Policy · Organization · Operation
+        </small>
+
+      </div>
+
+
+      <div class="topic">
+
+        <div class="topic-icon">
+          🧪
+        </div>
+
+        <h3>
+          바이브코딩 실험
+        </h3>
+
+        <p>
+          질문을 구체적으로 정의하고
+          AI와 코드를 활용해 분석 도구를 만들어가는 과정을 공개합니다.
+        </p>
+
+        <small>
+          Question → Data → Code → Insight
+        </small>
+
+      </div>
+
+    </div>
+
   </section>
+
 
   <section class="about-box about-box-data">
-    <div><div class="about-label">WHY THIS SITE?</div><h2>스포츠 산업을<br>‘감’보다 ‘근거’로 바라봅니다.</h2></div>
-    <p>스포츠 현장에서는 경험과 직관이 중요하지만, 사람을 설득하는 순간에는 그 판단을 뒷받침할 근거가 필요하다고 생각했습니다. 이곳에서는 공개자료와 데이터, 명확한 분석 가정을 바탕으로 스포츠 산업을 조금 더 객관적으로 바라보고, 그 과정에서 얻은 시사점을 함께 나눕니다.</p>
+
+    <div>
+
+      <div class="about-label">
+        WHY THIS SITE?
+      </div>
+
+      <h2>
+        스포츠 산업을
+        <br>
+        ‘감’보다 ‘근거’로 바라봅니다.
+      </h2>
+
+    </div>
+
+    <p>
+      스포츠 현장에서는 경험과 직관이 중요하지만,
+      사람을 설득하는 순간에는 그 판단을 뒷받침할 근거가 필요하다고 생각했습니다.
+      이곳에서는 공개자료와 데이터, 명확한 분석 가정을 바탕으로
+      스포츠 산업을 조금 더 객관적으로 바라보고,
+      그 과정에서 얻은 시사점을 함께 나눕니다.
+    </p>
+
   </section>
 
-  <section class="subscribe"><div><h2>분석은 결론보다 대화에서 더 좋아질 수 있다고 생각합니다.</h2><p>각 칼럼 아래에서 다른 해석, 모델의 아쉬운 점, 다음에 분석해봤으면 하는 주제를 자유롭게 남겨주세요.</p></div><div class="subscribe-actions"><a class="btn btn-dark" href="/sports-vibe-column/columns/ssg-ad-visibility.html#comments">댓글 참여하기</a><a class="btn btn-outline" href="/sports-vibe-column/about.html">글쓴이 소개</a></div></section>
+
+  <section class="subscribe">
+
+    <div>
+
+      <h2>
+        분석은 결론보다 대화에서 더 좋아질 수 있다고 생각합니다.
+      </h2>
+
+      <p>
+        각 칼럼 아래에서 다른 해석,
+        모델의 아쉬운 점,
+        다음에 분석해봤으면 하는 주제를 자유롭게 남겨주세요.
+      </p>
+
+    </div>
+
+
+    <div class="subscribe-actions">
+
+      <a
+        class="btn btn-dark"
+        href="/columns/ssg-ad-visibility.html#comments">
+        댓글 참여하기
+      </a>
+
+      <a
+        class="btn btn-outline"
+        href="/about.html">
+        글쓴이 소개
+      </a>
+
+    </div>
+
+  </section>
+
 </main>
 
-<footer class="site-footer"><div class="footer-inner"><div><strong>체대생의 스포츠 바이브코딩</strong><br>스포츠 산업을 데이터로 질문하고 분석하는 기록</div><div>© <span id="year"></span> · Built with HTML + Vibe Coding</div></div></footer>
-<script src="assets/site.js?v=20260907-0430"></script>
+
+<footer class="site-footer">
+
+  <div class="footer-inner">
+
+    <div>
+      <strong>
+        체대생의 스포츠 바이브코딩
+      </strong>
+      <br>
+      스포츠 산업을 데이터로 질문하고 분석하는 기록
+    </div>
+
+    <div>
+      © <span id="year"></span>
+      · Built with HTML + Vibe Coding
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="/assets/site.js?v=20260907-0430"></script>
+
 </body>
 </html>
