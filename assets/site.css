@@ -302,3 +302,69 @@ body{overflow-x:hidden}
   .writer-email{border-radius:14px!important}
   .brand-mark{border-radius:10px!important}
 }
+
+/* ===== 2026-09-07 MOBILE LAYOUT STABILITY PATCH ===== */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video,canvas,iframe{max-width:100%;height:auto}
+main,.nav,.hero-inner,.method-strip,.method-card,.article-list,.article-card,.topic-grid,.about-box,.subscribe,.footer-inner,.about-page{min-width:0}
+.article-card .copy,.topic,.about-box>*,.subscribe>*{min-width:0}
+
+@media(max-width:760px){
+  body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  .site-header{width:100%}
+  .nav{width:100%;max-width:none;padding:8px 14px 7px;gap:7px 10px}
+  .brand{width:100%;font-size:14px;line-height:1.25;gap:9px;overflow:hidden}
+  .brand>span:last-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .brand>span:last-child br{display:none}
+  .brand-sub{display:none}
+  .brand-mark{width:30px;height:30px;flex:0 0 30px;font-size:12px}
+  .nav-links{width:100%;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;border-top:1px solid var(--line);padding-top:4px}
+  .nav-links a{min-width:0;padding:7px 4px;font-size:12px;line-height:1.2}
+
+  .hero-home{min-height:0}
+  .hero-home:after{width:320px;height:320px;right:-170px;bottom:-170px}
+  .hero-inner{width:100%;padding:44px 16px 42px}
+  .hero-title{max-width:100%;font-size:clamp(32px,9.3vw,40px);line-height:1.18;letter-spacing:-.035em;overflow-wrap:anywhere}
+  .hero-title .accent{display:inline;overflow-wrap:anywhere}
+  .hero-desc{max-width:100%;font-size:14.5px;line-height:1.78;word-break:keep-all}
+  .eyebrow{max-width:100%;white-space:normal}
+  .hero-actions{grid-template-columns:1fr 1fr;width:100%}
+
+  .method-strip{width:100%;padding:0 16px}
+  .method-card{width:100%}
+  main{width:100%;padding:42px 16px 68px}
+  section{max-width:100%}
+  .count-pill{white-space:nowrap}
+
+  .article-card,.article-card-live{width:100%;max-width:100%;overflow:hidden}
+  .article-card-live .thumb,.article-card .thumb{width:100%;aspect-ratio:16/10;min-height:0!important;background-size:cover}
+  .article-card-live h3,.article-card h3{overflow-wrap:anywhere;word-break:keep-all}
+  .card-meta{display:flex;flex-wrap:wrap;gap:6px 10px}
+
+  .topic-grid,.article-list,.article-list-home{width:100%}
+  .topic{width:100%}
+  .about-box,.subscribe{width:100%;max-width:100%}
+  .about-box h2,.subscribe h2,.page-hero h1,.intro-note h2,.belief-box h2,.closing-note h2{overflow-wrap:anywhere;word-break:keep-all}
+
+  .page-hero .hero-inner{padding:40px 16px 36px}
+  .page-hero h1,.about-hero h1{font-size:clamp(29px,8.6vw,34px);line-height:1.28}
+  .page-hero h1 br,.about-hero h1 br{display:none}
+  .about-page{width:100%;padding:40px 16px 64px}
+  .writer-tags{max-width:100%}
+  .writer-tags span{max-width:100%}
+  .story-step{width:100%}
+  .belief-grid{width:100%}
+  .writer-contact,.writer-email{width:100%;max-width:100%}
+
+  .footer-inner{width:100%;overflow-wrap:anywhere}
+}
+
+@media(max-width:420px){
+  .nav{padding-left:12px;padding-right:12px}
+  .hero-inner{padding-left:14px;padding-right:14px}
+  .hero-title{font-size:31px}
+  .hero-actions{grid-template-columns:1fr}
+  main{padding-left:14px;padding-right:14px}
+  .method-strip{padding-left:14px;padding-right:14px}
+  .about-page{padding-left:14px;padding-right:14px}
+}
