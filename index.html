@@ -50,11 +50,145 @@ html,body{max-width:100%;overflow-x:hidden}
   .count-pill{font-size:11px!important}
 }
 </style>
+
+<style id="column-grid-equal-pager">
+/* Equal-size column cards + pager */
+.brand{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:1px;
+  min-width:0;
+}
+.brand-title{
+  display:block;
+  line-height:1.08;
+  margin:0;
+}
+.brand-sub{
+  display:block!important;
+  margin:1px 0 0!important;
+  line-height:1.05!important;
+}
+
+.columns-home{overflow:hidden}
+.article-list-home{
+  --cols:2;
+  display:grid!important;
+  grid-template-columns:repeat(var(--cols),minmax(0,1fr))!important;
+  gap:22px!important;
+  align-items:stretch!important;
+  width:100%!important;
+}
+.article-list-home .article-card{
+  display:flex!important;
+  flex-direction:column!important;
+  width:100%!important;
+  min-width:0!important;
+  height:100%!important;
+  border-radius:24px!important;
+  overflow:hidden!important;
+}
+.article-list-home .article-card .thumb{
+  width:100%!important;
+  min-width:0!important;
+  height:250px!important;
+  min-height:250px!important;
+  flex:none!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+.article-list-home .article-card .copy{
+  display:flex!important;
+  flex:1!important;
+  flex-direction:column!important;
+  width:100%!important;
+  min-width:0!important;
+  padding:26px 26px 24px!important;
+}
+.article-list-home .article-card h3{
+  margin:16px 0 12px!important;
+  font-size:24px!important;
+  line-height:1.38!important;
+  min-height:66px;
+}
+.article-list-home .article-card p{
+  margin:0 0 16px!important;
+  line-height:1.72!important;
+}
+.article-list-home .article-card .card-meta{margin-top:auto!important}
+.article-list-home .article-card .read-link{margin-top:18px!important}
+
+.column-pager{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:26px auto 0;
+  min-height:44px;
+}
+.pager-btn{
+  width:42px;
+  height:42px;
+  border:1px solid #d7e0e8;
+  border-radius:50%;
+  background:#fff;
+  color:#10243c;
+  font:800 17px "Pretendard",sans-serif;
+  cursor:pointer;
+  transition:.18s ease;
+}
+.pager-btn:hover:not(:disabled){transform:translateY(-1px);border-color:#9fb2c4;box-shadow:0 7px 18px rgba(16,36,60,.08)}
+.pager-btn:disabled{opacity:.32;cursor:default}
+.pager-dots{display:flex;align-items:center;gap:7px}
+.pager-dot{
+  width:8px;height:8px;border:0;border-radius:999px;padding:0;
+  background:#cbd6df;cursor:pointer;transition:.18s ease
+}
+.pager-dot.active{width:24px;background:#153f69}
+.pager-status{font-size:12px;font-weight:800;color:#7a8794;min-width:38px;text-align:center}
+.column-pager.is-single{display:none}
+
+@media (min-width:761px){
+  .article-list-home[data-visible-count="1"]{max-width:560px;margin-left:auto;margin-right:auto}
+  .article-list-home[data-visible-count="2"]{max-width:960px;margin-left:auto;margin-right:auto}
+  .article-list-home[data-visible-count="3"]{max-width:none}
+}
+@media (max-width:1050px) and (min-width:761px){
+  .article-list-home{gap:18px!important}
+  .article-list-home .article-card .thumb{height:225px!important;min-height:225px!important}
+  .article-list-home .article-card h3{font-size:22px!important;min-height:61px}
+}
+@media (max-width:760px){
+  .brand-text{gap:0}
+  .brand-title{line-height:1.05!important}
+  .brand-sub{margin-top:1px!important;line-height:1!important}
+  .article-list-home{
+    --cols:1!important;
+    grid-template-columns:1fr!important;
+  }
+  .article-list-home .article-card .thumb{
+    height:220px!important;
+    min-height:220px!important;
+  }
+  .article-list-home .article-card h3{
+    min-height:0;
+    font-size:22px!important;
+  }
+  .column-pager{margin-top:20px}
+}
+</style>
+
 </head>
 <body>
 <header class="site-header">
   <nav class="nav">
-    <a class="brand" href="index.html"><span class="brand-mark">VC</span><span>바이브코딩으로 바라본 스포츠산업<br><span class="brand-sub">Sports Industry × Vibe Coding</span></span></a>
+    <a class="brand" href="index.html"><span class="brand-mark">VC</span><span class="brand-text"><span class="brand-title">바이브코딩으로 바라본 스포츠산업</span><span class="brand-sub">Sports Industry × Vibe Coding</span></span></a>
     <div class="nav-links"><a href="#columns">칼럼</a><a href="#themes">주제</a><a href="about.html">글쓴이</a></div>
   </nav>
 </header>
@@ -97,6 +231,13 @@ html,body{max-width:100%;overflow-x:hidden}
         <div class="copy"><span class="tag">⚾ 스포츠마케팅 · 바이브코딩</span><h3>야구장 광고, 어디가 진짜 좋은 자리인가</h3><p>SSG 랜더스필드 광고구좌를 현장 관중의 시야라는 한 가지 기준으로 나눠 비교했습니다.</p><div class="card-meta"><span>SSG 랜더스필드</span><span>시야각 분석</span></div><span class="read-link">읽어보기 →</span></div>
       </a>
     </div>
+
+    <div class="column-pager" aria-label="칼럼 페이지 이동">
+      <button class="pager-btn pager-prev" type="button" aria-label="이전 칼럼">←</button>
+      <div class="pager-dots" aria-label="칼럼 페이지"></div>
+      <span class="pager-status" aria-live="polite"></span>
+      <button class="pager-btn pager-next" type="button" aria-label="다음 칼럼">→</button>
+    </div>
   </section>
 
   <section id="themes">
@@ -118,5 +259,95 @@ html,body{max-width:100%;overflow-x:hidden}
 
 <footer class="site-footer"><div class="footer-inner"><div><strong>바이브코딩으로 바라본 스포츠산업</strong><br>스포츠 산업을 데이터로 질문하고 분석하는 기록</div><div>© <span id="year"></span> · Built with HTML + Vibe Coding</div></div></footer>
 <script src="assets/site.js?v=20260907-0335"></script>
+
+<script id="column-pager-script">
+(() => {
+  const grid = document.querySelector('.article-list-home');
+  const pager = document.querySelector('.column-pager');
+  if (!grid || !pager) return;
+
+  const cards = Array.from(grid.querySelectorAll('.article-card'));
+  const prev = pager.querySelector('.pager-prev');
+  const next = pager.querySelector('.pager-next');
+  const dots = pager.querySelector('.pager-dots');
+  const status = pager.querySelector('.pager-status');
+
+  let page = 0;
+  let perPage = 3;
+
+  function getPerPage(){
+    if (window.innerWidth <= 760) return 1;
+    if (window.innerWidth <= 1080) return 2;
+    return 3;
+  }
+
+  function render(resetPage = false){
+    const newPerPage = getPerPage();
+    if (resetPage || newPerPage !== perPage) {
+      perPage = newPerPage;
+      page = 0;
+    }
+
+    const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
+    if (page > totalPages - 1) page = totalPages - 1;
+
+    const start = page * perPage;
+    const end = start + perPage;
+
+    cards.forEach((card, i) => {
+      card.hidden = !(i >= start && i < end);
+    });
+
+    const visibleCount = Math.max(0, Math.min(perPage, cards.length - start));
+    grid.style.setProperty('--cols', visibleCount || 1);
+    grid.dataset.visibleCount = String(visibleCount || 1);
+
+    dots.innerHTML = '';
+    for (let i = 0; i < totalPages; i++){
+      const dot = document.createElement('button');
+      dot.className = 'pager-dot' + (i === page ? ' active' : '');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `${i + 1}페이지로 이동`);
+      dot.addEventListener('click', () => {
+        page = i;
+        render();
+        grid.scrollIntoView({behavior:'smooth', block:'nearest'});
+      });
+      dots.appendChild(dot);
+    }
+
+    status.textContent = `${page + 1} / ${totalPages}`;
+    prev.disabled = page === 0;
+    next.disabled = page === totalPages - 1;
+    pager.classList.toggle('is-single', totalPages <= 1);
+  }
+
+  prev.addEventListener('click', () => {
+    if (page > 0) {
+      page--;
+      render();
+      grid.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+  });
+
+  next.addEventListener('click', () => {
+    const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
+    if (page < totalPages - 1) {
+      page++;
+      render();
+      grid.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+  });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => render(), 120);
+  });
+
+  render(true);
+})();
+</script>
+
 </body>
 </html>

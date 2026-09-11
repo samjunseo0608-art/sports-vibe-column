@@ -34,9 +34,22 @@ html,body{max-width:100%;overflow-x:hidden}
   .story-step{grid-template-columns:1fr!important}
 }
 </style>
+
+<style id="brand-gap-tight">
+.brand{display:flex!important;align-items:center!important;gap:10px!important}
+.brand-text{display:flex;flex-direction:column;justify-content:center;gap:1px;min-width:0}
+.brand-title{display:block;line-height:1.08;margin:0}
+.brand-sub{display:block!important;margin:1px 0 0!important;line-height:1.05!important}
+@media(max-width:760px){
+  .brand-text{gap:0}
+  .brand-title{line-height:1.05!important}
+  .brand-sub{margin-top:1px!important;line-height:1!important}
+}
+</style>
+
 </head>
 <body>
-<header class="site-header"><nav class="nav"><a class="brand" href="index.html"><span class="brand-mark">VC</span><span>바이브코딩으로 바라본 스포츠산업<br><span class="brand-sub">Sports Industry × Vibe Coding</span></span></a><div class="nav-links"><a href="index.html#columns">칼럼</a><a href="index.html#themes">주제</a><a class="active" href="about.html">글쓴이</a></div></nav></header>
+<header class="site-header"><nav class="nav"><a class="brand" href="index.html"><span class="brand-mark">VC</span><span class="brand-text"><span class="brand-title">바이브코딩으로 바라본 스포츠산업</span><span class="brand-sub">Sports Industry × Vibe Coding</span></span></a><div class="nav-links"><a href="index.html#columns">칼럼</a><a href="index.html#themes">주제</a><a class="active" href="about.html">글쓴이</a></div></nav></header>
 
 <section class="page-hero about-hero"><div class="hero-inner"><span class="eyebrow">ABOUT THE WRITER</span><h1>스포츠 산업을 더 설득력 있게<br>바라보고 싶은 체대생입니다.</h1><p>스포츠 마케팅과 스포츠 행정에 관심을 두고, 현장에서 생긴 질문을 데이터와 바이브코딩으로 분석하고 있습니다.</p></div></section>
 
